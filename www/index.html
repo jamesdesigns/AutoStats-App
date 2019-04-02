@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- Added from helloworld app -->
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <script>
+  $(function(){
+      $( "[data-role='header'], [data-role='footer']" ).toolebar();
+  });
+      </script>
+  <!-- End of from helloworld app-->    
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+  <title>AutoFinder</title>
+  <link rel="stylesheet" href="css/jquery.mobile.min.css">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Esteban" rel="stylesheet"> -->
+  <style>
+    #homeBanner {
+      width: 100%;
+    }
+
+    #homeScreen {
+      width: 100%;
+      height: auto;
+    }
+
+    #battery-status 
+    {
+      margin-left: 8%;
+    }
+
+    .event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+    #header {
+      background-image: url('imgs/autofinder-bg.png');
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 160px;
+      -webkit-mask-repeat-x: no-repeat;
+      -webkit-mask-repeat-y: no-repeat;
+    }
+
+    header h1.title {
+      font-family: Arial, Helvetica, sans-serif;
+      text-shadow: none !important;
+      text-align:center;
+      font-size: 400%;
+      color: #e12929;
+      padding-top: 30px;
+      margin-top:-3%;
+    }
+
+   header p.subtitle {
+      color: #cccbcb;
+      margin-top: -55px;
+      margin-left: 10%;
+      font-size: 97%;
+      text-shadow: none !important;
+    }
+    
+    .center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      marginm-top:-10px;
+    }
+    
+    .banner {
+      display: block;
+      width: 100%;
+    }
+    
+    #qrcode {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    #map2 {
+      margin-left: -10px;
+      margin-right: 3%;
+      width: 320px;
+      height: 320px;
+    }
+  </style>
+   <script src="js/jquery-1.11.1.js"></script>
+   <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <!-- <script src="js/jquery.js"></script> -->
+  <!-- <script src="js/jquery.mobile.min.js"></script> -->
+
+</head>
+
+<body>
+  
+  <div id="homeScreen" data-role="page" data-theme="b">
+
+    <div class="app">
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+                <p id="battery-status"></p> 
+            </div>
+    </div> <!-- END OF DIV CLASS=APP -->
+
+    <header>
+      <h1 class="title">AutoStats</h1>
+    <p class="subtitle">Explore All the Stats.</p>
+    </header>
+<div id="header">        
+    
+  </div>  
+    <div data-role="content">
+      <ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
+        <li><a href="#programsEvents">New 2019 Vehicles</a></li>
+        <li><a href="#fineart">All Electric</a></li>
+        <li><a href="#currentExhibits">4x4</a></li>
+        <li><a href="#pastExhibits">About</a></li>
+        <li><a href="#discoverScreen">Contact Us</a></li>
+
+      </ul>
+      <div class="ui-grid-a center">
+        <div class="ui-block-a">
+          <a href="#aboutScreen" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon">Info</a>
+        </div>
+        <div class="ui-block-b">
+          <a href="#mapScreen" class="ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon">Map</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- New Page 1 -->
+  <div id="programsEvents" data-role="page" data-theme="b">
+      <header data-role="header" data-position="fixed" data-id="appHeader">
+          <h1>AutoStats</h1>
+          <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+        </header>
+        <div data-role="content">
+            <h1 class="center">New 2019 Vehicles</h1>
+            <ul data-role="listview" data-inset="false" class="ui-nodisc-icon ui-alt-icon">
+                <li>
+                  <a href="#"><img width="160" height="160" src="imgs/new-C-class-mercedes.jpg">
+                    <h2>2019 C Class Sedan</h2>
+                    <p>Explore New Features</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><img width="160" height="160" src="imgs/new-mustang-shelby.jpg">
+                    <h2>2019 Mustang Shelby</h2>
+                    <p>Faster than ever.</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><img width="160" height="160" src="imgs/new-bmw-8-series.jpg">
+                    <h2>2019 BMW 8 Series coupe</h2>
+                    <p>BMW hits the mark.</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><img width="160" height="160" src="imgs/new-porsche-911.jpg">
+                    <h2>2019 Porsche 911 Turbo</h2>
+                    <p>Collector's Edition</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><img width="160" height="160" src="imgs/new-jeep-grandcherokee.jpg">
+                    <h2>2019 Jeep Cherokee Limited</h2>
+                    <p>The New Luxury in SUV's</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><img width="160" height="160" src="imgs/new-bugatti.jpg">
+                    <h2>2019 All New Bugatti</h2>
+                    <p>Most Expensive Vehicle</p>
+                  </a>
+                </li>
+              </ul>
+        </div>
+  </div>
+  <!-- New Page 2 -->
+  <div id="fineart" data-role="page">
+      <header data-role="header" data-position="fixed" data-id="appHeader">
+          <h1>AutoStats</h1>
+          <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+        </header>
+        <div data-role="content">
+
+          <img src="imgs/gallery-image.jpg" width="340" height="360" alt="Art Gallery" />
+          <h1>Yang Yongliang Exhibit</h1>
+          <p>Yang Yongliang" opens today. In Yang's photographs, light boxes, and videos, he explores the materiality of the photographic medium. Digital photography is Yang’s ink, and editing software is his brush. Walking the streets of Shanghai and other rapidly growing Asian cities, Yang digitally photographs details of the urban environment. Then, at his desktop, he layers details of his photographs to compose a new yet reminiscent landscape. ⠀</p>
+        </div>
+
+  </div>
+
+  <div id="currentExhibits" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>AutoStats</h1>
+      <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <h1 class="center">Current Exhibits</h1>
+      <ul data-role="listview" data-inset="false" class="ui-nodisc-icon ui-alt-icon">
+        <li>
+          <a href="#"><img src="imgs/Westhoff_thumb.png">
+            <h2>Siobhan Westhoff</h2>
+            <p>Final Weeks</p>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/101733188_thumb.png">
+            <h2>RED</h2>
+            <p>Eleanor Friosh</p>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/106588354_thumb.png">
+            <h2>Imbalanced</h2>
+            <p>Simone Best, Sheldon Crane, and Elizabeth Moore</p>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/924520721_thumb.png">
+            <h2>Morten Rand-Hendriksen</h2>
+            <p>The Untitled Collection</p>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/Vision_thumb.png">
+            <h2>VISION</h2>
+            <p>New Works from the SAMOCA Permanent Collection</p>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/Watching_thumb.png">
+            <h2>Paul Shellmont: Bird Watching</h2>
+            <p>Upcoming Exhibition</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="pastExhibits" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>AutoStats</h1>
+      <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <h1 class="center">Past Exhibits</h1>
+      <ul data-role="listview" data-inset="false" class="ui-nodisc-icon ui-alt-icon">
+        <li>
+          <a href="#"><img src="imgs/GroundSwell_thumb.png">
+            <h2>Groundswell: Design Series II</h2>
+            <p> </p>
+          </a>
+        </li>
+        <li>
+          <a href="#"><img src="imgs/Buildings_thumb.png">
+            <h2>Reflections on Architecture: Imagining Buildings</h2>
+            <p> </p>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div id="mapScreen" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>AutoStats</h1>
+      <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <h2 class="center">Utah Musuem of Fine Arts</h2>
+      <p class="center">410 Campus Center Dr, Salt Lake City, UT 84112
+        <br>(801)581-7332</p>
+      <div id="map2"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0799551639516!2d-111.84539374926442!3d40.76026614249724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87525fed0ade773d%3A0xe27489c533e8c62!2sMarcia+%26+John+Price+Museum%2C+410+Campus+Center+Dr%2C+Salt+Lake+City%2C+UT+84112!5e0!3m2!1sen!2sus!4v1551844437083" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+    </div>
+  </div>
+
+  <div id="discoverScreen" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>AutoStats</h1>
+      <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <img id="qrcode" src="imgs/qr.png" />
+      <h3 class="center">Discover More Exciting Stories</h3>
+      <p class="center">Any time you see this QR code, scan it using the Discover button to see additional content from SAMOCA.</p>
+      <a id="qrScanBtn" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Discover</a>
+    </div>
+  </div>
+
+  <div id="aboutScreen" data-role="page">
+    <header data-role="header" data-position="fixed" data-id="appHeader">
+      <h1>AutoStats</h1>
+      <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+    </header>
+    <div data-role="content">
+      <h2 class="center">Utah Museum of Fine Arts</h2>
+      <h3 class="center">Celebrating 50 years</h3>
+      <img class="center banner" src="imgs/fine-arts.jpg" />
+      <p>The Utah Museum of Fine Arts (UMFA) at the University of Utah is your destination for global visual arts. From ancient objects to the latest contemporary works, the UMFA galleries—reimagined and remodeled in 2017—showcase the breadth and depth of human history and creativity. The Museum’s collection of nearly 20,000 original works of art is the most dynamic in the region. As the fine arts museum for both the state and the University, the UMFA is a vibrant hub for cultural exchange among campus and community audiences.</p>
+      <p class="left">123 Main Street Ventura, CA 12345 (800) 555-1212</p>
+    </div>
+  </div>
+  <!--
+	Admission
+	Directions
+	Parking
+	Hours
+	Volunteer
+  -->
+
+  <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+  </script>
+</body>
+
+</html>
