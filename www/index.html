@@ -107,7 +107,7 @@
       text-align: center;
       margin-left: auto;
       margin-right: auto;
-      marginm-top:-10px;
+      margin-top:-10px;
     }
     
     .banner {
@@ -239,6 +239,9 @@
           <img src="imgs/logo-toyota.jpg" width="340" height="320" alt="Toyota" />
           <h1>Toyota Models</h1>
           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+          <img src="imgs/logo-chevrolet.jpg" width="340" height="320" alt="Chevrolet" />
+          <h1>Chevrolet Models</h1>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
         
         </div>
 
@@ -331,14 +334,29 @@
   </div>
 
   <div id="discoverScreen" data-role="page">
-    <header data-role="header" data-position="fixed" data-id="appHeader">
+    <header data-role="header" data-position="fixed" data-id="appHeader"  data-theme="b">
       <h1>AutoStats</h1>
       <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
     </header>
     <div data-role="content">
-      <img id="qrcode" src="imgs/qr.png" />
-      <h3 class="center">Discover More Exciting Stories</h3>
-      <p class="center">Any time you see this QR code, scan it using the Discover button to see additional content from SAMOCA.</p>
+      <!-- <img id="qrcode" src="imgs/qr.png" /> -->
+      <h3 class="center">Contact Us</h3>
+      <p class="center">Feel free to contact us for any further information. All our statistics come from reliable resources from each auto dealership.</p>
+      
+      <form method="get" action="">
+        <fieldset class="ui-field-contain">
+          <label type="text" name="fullname" id="fullname">Full Name</label>
+          <input type="text" name="fullname" id="fullname">
+          <label form="email">Email Address</label>
+          <input type="text" name="email" id="email">
+          <div class="ui-field-contain">
+            <label form="details">Comments or Questions</label>
+            <textarea id="detials"></textarea>
+          </div>
+
+        </fieldset>
+      </form>
+      
       <a id="qrScanBtn" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Discover</a>
     </div>
   </div>
