@@ -338,12 +338,28 @@
       <h1 class="center">Hello!</h3>
       <p class="left">Feel free to contact us for any further information. All our statistics come from reliable resources from each auto dealership.</p>
       
+      <div class="ui-content">
       <form method="get" action="">
         <fieldset class="ui-field-contain">
           <label type="text" name="fullname" id="fullname">Full Name</label>
           <input type="text" name="fullname" id="fullname">
           <label form="email">Email Address</label>
           <input type="text" name="email" id="email">
+          <form method="get" action="">
+              <fieldset data-role="controlgroup">
+                <legend>Favorite Type of Car:</legend>
+                <label for="rb1">Sports Car</label>
+                <input type="radio" name="rb" id="rb1" value="rb1"/>
+                <label for="rb2">Truck</label>
+                <input type="radio" name="rb" id="rb2" value="rb2" checked="checked"/>
+                <label for="rb3">Luxury</label>
+                <input type="radio" name="rb" id="rb3" value="rb3"/>
+                <label for="rb4">All Wheel Drive</label>
+                <input type="radio" name="rb" id="rb4" value="rb4"/>
+              </fieldset>
+              </form>
+            </div>
+
           <div class="ui-field-contain">
             <label form="details">Comments or Questions</label>
             <textarea id="detials"></textarea>
