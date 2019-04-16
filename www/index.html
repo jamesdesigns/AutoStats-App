@@ -151,6 +151,10 @@
       margin-left: 50px !important;
     }
 
+    .imageMar {
+      margin-left: -30px;
+    }
+
     .footer {
       font-size: 80%;
       font-weight: 100;
@@ -161,6 +165,7 @@
   </style>
    <script src="js/jquery-1.11.1.js"></script>
    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
   <!-- <script src="js/jquery.js"></script> -->
   <!-- <script src="js/jquery.mobile.min.js"></script> -->
 
@@ -189,7 +194,7 @@
       </ul>
 
     </nav>
-    <!-- <div><a class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-search">Search</a></div> -->
+
     <header>
       <h1 class="title">AutoStats</h1>
     <p class="subtitle">Explore all the Stats.</p>
@@ -202,11 +207,7 @@
     <div data-role="content">
       <ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
         <li><a href="#programsEvents" data-transition="slide">New 2019 Vehicles</a></li>
-        <li><a href="#fineart" data-transition="fade">Electric / Hybrid</a></li>
-        <!-- <li><a href="#currentExhibits" data-transition="fade">4x4</a></li> -->
-        <!-- <li><a href="#pastExhibits">Mission</a></li> -->
-        <!-- <li><a href="#discoverScreen">Contact</a></li> -->
-
+        <li><a href="#fineart" data-transition="fade">New 2019 Electric Models</a></li>
       </ul>
 
     </div>
@@ -215,11 +216,10 @@
       </div>
   </div>
 
-  <!-- New Page 1 -->
   <div id="programsEvents" data-role="page">
       <header data-role="header" data-position="fixed" data-id="appHeader">
           <h1>AutoStats</h1>
-          <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+          <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon" data-transition="slidedown">Back</a>
         </header>
         <div data-role="content">
             <h1 class="center">New 2019 Vehicles</h1>
@@ -268,50 +268,41 @@
   <div id="fineart" data-role="page">
       <header data-role="header" data-position="fixed" data-id="appHeader">
           <h1>AutoStats - Electric</h1>
-          <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
+          <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon" data-transition="slidedown">Back</a>
         </header>
         <div data-role="content">
-          <h1 class="center">All Electric</h1>
-          <img src="imgs/logo-tesla.png" width="340" height="360" alt="Tesla" />
-          <h2>Tesla Models</h2>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p><br>
-          <ul data-role="listview">
-              <li><a href="#page9">Model S</a></li>
-              <li><a href="#page10">Model 3</a></li>
-              <li><a href="#page11">Model X</a></li>
-              <li><a href="#page12">Model Y</a></li>
-              <li><a href="#page12">Model Y</a></li>
-          </ul>
-          <br>
-          <br>
-          <img src="imgs/logo-BMW.jpg" width="340" height="320" alt="BMW" />
-          <h2>BMW Models</h2>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p><br>
-          <ul data-role="listview">
-              <li><a href="#page9">i3</a></li>
-              <li><a href="#page10">i8</a></li>
-          </ul>
-          <br><br>
-          <img src="imgs/logo-toyota.jpg" width="340" height="320" alt="Toyota" />
-          <h2>Toyota Models</h2>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p><br>
-          <br>
-          <ul data-role="listview">
-              <li><a href="#page9">Prius Prime</a></li>
-          </ul><br><br>
-          <img src="imgs/logo-chevrolet.jpg" width="340" height="320" alt="Chevrolet" />
-          <h2>Chevrolet Models</h2>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p><br>
-          <br>
-          <ul data-role="listview">
-              <li><a href="#page9">Bolt EV</a></li>
-              <li><a href="#page10">Volt</a></li>
-              <li><a href="#page10">Spark EV LT</a></li>
-          </ul><br><br>
-          </div>
-          <div data-role="footer" class="ui-grid-a center">
+          <h1 class="center">Electric Models</h1>
 
-            </div>
+          <div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+                  <div data-role="collapsible" data-iconpos="right">
+                      <h3>Tesla Models</h3>
+              <img class="imageMar" src="imgs/logo-tesla.png" width="340" height="360" alt="Tesla" />
+              <ul data-role="listview">
+                  <li><a href="#page9">Tesla Model S</a></li>
+                  <li><a href="#page10">Tesla Model 3</a></li>
+                  <li><a href="#page11">Tesla Model X</a></li>
+                  <li><a href="#page12">Tesla Model Y</a></li>
+                  <li><a href="#page12">Tesla Model Y</a></li>
+              </ul>
+                  </div>
+                  <div data-role="collapsible" data-iconpos="right">
+                      <h3>BMW Models</h3>
+              <img class="imageMar" src="imgs/logo-BMW.jpg" width="340" height="320" alt="BMW" />
+              <ul data-role="listview">
+                  <li><a href="#page9">BMW i3</a></li>
+                  <li><a href="#page10">BMW i8</a></li>
+              </ul>
+                  </div>
+                  <div data-role="collapsible" data-iconpos="right">
+                      <h3>Toyota Models</h3>
+              <img class="imageMar" src="imgs/logo-toyota.jpg" width="340" height="320" alt="Toyota" />
+              <ul data-role="listview">
+                  <li><a href="#page9">Prius Prime</a></li>
+              </ul>
+                  </div>
+              </div>
+          </div>
+        </div>
   </div>
 
 
@@ -427,13 +418,6 @@
         <p id="div1"></p>
       </div>
     </div>
-  <!--
-	Admission
-	Directions
-	Parking
-	Hours
-	Volunteer
-  -->
 
   <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
@@ -441,5 +425,4 @@
         app.initialize();
   </script>
 </body>
-
 </html>
