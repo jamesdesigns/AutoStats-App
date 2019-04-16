@@ -18,6 +18,7 @@ var app = {
         app.receivedEvent('deviceready');
 
        window.addEventListener("batterystatus", onBatteryStatus, false);
+       window.addEventListener("deviceready", onDeviceReady, false);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -31,8 +32,10 @@ var app = {
         var batteryStatus = status.batterystatus;
         document.getElementById("battery-status").innerHTML = "Battery Level: " + status.level + "<br>" +
          "Is Plugged: " + status.isPlugged;
-
-
+         var deviceVersion = device.version;
+        document.getElementById("device").innerHTML = "Device: " + device.version;
+   
+    
 
        // document.getElementById('battery-status').innerHTML = "Battery Status: " + batteryStatus;
         // document.getElementById("battery-status").innerText = batteryStatus;
@@ -44,4 +47,10 @@ var app = {
 function onBatteryStatus(status) {
     document.getElementById("battery-status").innerHTML = "Battery Level: " + status.level + "<br>" + "Is Plugged: " + status.isPlugged;
     console.log("Level: " + status.level + " isPlugged: " + status.isPlugged);
+
+}
+
+function onDeviceReady() {
+    document.getElementById("device").innerHTML = "Device: " + device.version;
+    console.log("Device: " + device.version);
 }
