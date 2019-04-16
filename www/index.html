@@ -32,6 +32,10 @@
     {
       margin-left: 8%;
     }
+    #device
+    {
+      margin-left: 8%;
+    }
 
     .event {
     border-radius:4px;
@@ -144,6 +148,7 @@
                 <p class="event listening">Connecting to Device</p>
                 <p class="event received">Device is Ready</p>
                 <p id="battery-status"></p> 
+                <p id="device"></p>
             </div>
     </div> <!-- END OF DIV CLASS=APP -->
 
@@ -157,19 +162,19 @@
   </div>  
     <div data-role="content">
       <ul data-role="listview" data-inset="true" class="ui-nodisc-icon ui-alt-icon">
-        <li><a href="#programsEvents">New 2019 Vehicles</a></li>
-        <li><a href="#fineart">Electric / Hybrid</a></li>
-        <li><a href="#currentExhibits">4x4</a></li>
-        <li><a href="#pastExhibits">Mission</a></li>
-        <li><a href="#discoverScreen">Contact</a></li>
+        <li><a href="#programsEvents" data-transition="slide">New 2019 Vehicles</a></li>
+        <li><a href="#fineart" data-transition="fade">Electric / Hybrid</a></li>
+        <li><a href="#currentExhibits" data-transition="fade">4x4</a></li>
+        <!-- <li><a href="#pastExhibits">Mission</a></li> -->
+        <!-- <li><a href="#discoverScreen">Contact</a></li> -->
 
       </ul>
       <div class="ui-grid-a center">
         <div class="ui-block-a">
-          <a href="#aboutScreen" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon">Info</a>
+          <a href="#aboutScreen" class="ui-btn ui-corner-all ui-icon-info ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon" data-transition="fade">Info</a>
         </div>
         <div class="ui-block-b">
-          <a href="#mapScreen" class="ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon">Map</a>
+          <a href="#mapScreen" class="ui-btn ui-corner-all ui-icon-location ui-btn-icon-notext ui-btn-inline ui-nodisc-icon ui-alt-icon" data-transition="fade">Map</a>
         </div>
       </div>
     </div>
@@ -185,39 +190,39 @@
             <h1 class="center">New 2019 Vehicles</h1>
             <ul data-role="listview" data-inset="false" class="ui-nodisc-icon ui-alt-icon">
                 <li>
+                    <a href="#"><img width="160" height="160" src="imgs/new-bmw-8-series.jpg">
+                      <h2>2019 BMW</h2>
+                      <p>8 Series coupe</p>
+                    </a>
+                  </li>
+                  <li>
+                      <a href="#"><img width="160" height="160" src="imgs/new-bugatti.jpg">
+                        <h2>2019 BUGATTI</h2>
+                        <p>Most Expensive Vehicle</p>
+                      </a>
+                    </li>
+                    <li>
+                        <a href="#"><img width="160" height="160" src="imgs/new-jeep-grandcherokee.jpg">
+                          <h2>2019 JEEP</h2>
+                          <p>Grand Cherokee Limited</p>
+                        </a>
+                      </li>
+                <li>
                   <a href="#"><img width="160" height="160" src="imgs/new-C-class-mercedes.jpg">
-                    <h2>2019 C Class Sedan</h2>
-                    <p>Explore New Features</p>
+                    <h2>2019 MERCEDES</h2>
+                    <p>C Class Sedan</p>
                   </a>
                 </li>
                 <li>
                   <a href="#"><img width="160" height="160" src="imgs/new-mustang-shelby.jpg">
-                    <h2>2019 Mustang Shelby</h2>
-                    <p>Faster than ever.</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#"><img width="160" height="160" src="imgs/new-bmw-8-series.jpg">
-                    <h2>2019 BMW 8 Series coupe</h2>
-                    <p>BMW hits the mark.</p>
+                    <h2>2019 MUSTANG</h2>
+                    <p>Mustang Shelby</p>
                   </a>
                 </li>
                 <li>
                   <a href="#"><img width="160" height="160" src="imgs/new-porsche-911.jpg">
-                    <h2>2019 Porsche 911 Turbo</h2>
-                    <p>Collector's Edition</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#"><img width="160" height="160" src="imgs/new-jeep-grandcherokee.jpg">
-                    <h2>2019 Jeep Cherokee Limited</h2>
-                    <p>The New Luxury in SUV's</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#"><img width="160" height="160" src="imgs/new-bugatti.jpg">
-                    <h2>2019 All New Bugatti</h2>
-                    <p>Most Expensive Vehicle</p>
+                    <h2>2019 PORSCHE</h2>
+                    <p>911 Turbo</p>
                   </a>
                 </li>
               </ul>
@@ -302,7 +307,7 @@
     </div>
   </div>
 
-  <div id="pastExhibits" data-role="page" data-theme="b">
+  <!-- <div id="pastExhibits" data-role="page" data-theme="b">
     <header data-role="header" data-position="fixed" data-id="appHeader">
       <h1>AutoStats</h1>
       <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
@@ -313,7 +318,7 @@
 
       </ul>
     </div>
-  </div>
+  </div> -->
 
   <div id="mapScreen" data-role="page">
     <header data-role="header" data-position="fixed" data-id="appHeader" data-theme="b">
@@ -329,14 +334,14 @@
 
     </div>
   </div>
-
+<!-- 
   <div id="discoverScreen" data-role="page" data-theme="b">
     <header data-role="header" data-position="fixed" data-id="appHeader"  data-theme="b">
       <h1>AutoStats</h1>
       <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon">Back</a>
     </header>
     <div data-role="content">
-      <!-- <img id="qrcode" src="imgs/qr.png" /> -->
+      <img id="qrcode" src="imgs/qr.png" /> 
       <h1 class="center">Hello!</h3>
       <p class="left">Feel free to contact us for any further information. All our statistics come from reliable resources from each auto dealership.</p>
       
@@ -373,7 +378,7 @@
       
       
     </div>
-  </div>
+  </div> -->
 
   <div id="aboutScreen" data-role="page" data-theme="b">
     <header data-role="header" data-position="fixed" data-id="appHeader">
