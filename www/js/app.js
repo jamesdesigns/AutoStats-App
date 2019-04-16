@@ -54,3 +54,19 @@ function onDeviceReady() {
     document.getElementById("device").innerHTML = "Device: " + device.version;
     console.log("Device: " + device.version);
 }
+
+
+function callApi() {
+    $.ajax({
+        url: 'https://www.carqueryapi.com/api/0.3/?callback=?&cmd=getMakes&year=2000&sold_in_us=1',
+        type: 'GET',
+        dataType: 'json',
+        success: function (data) {
+            $("#div1").html(data[0].name);
+            console.log(data);
+        },
+        error: function (request, data) {
+            alert("Request: " + JSON.stringify(request));
+        }
+    });
+}
