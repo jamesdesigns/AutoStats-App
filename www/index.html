@@ -147,6 +147,10 @@
       height: 320px;
     }
 
+    .leftMargin {
+      margin-left: 50px !important;
+    }
+
     .footer {
       font-size: 80%;
       font-weight: 100;
@@ -354,21 +358,48 @@
       <h1 class="center">Contact Us</h2>
       <!-- <h3 class="center"></h3> -->
       <!-- <img class="center banner" src="imgs/autostats-info-img.jpg" /> -->
-      <p class="left">Feel free to contact us if you have any further questions regarding vehicle stats. We welcome feedback and continually improve the data we have to offer.</p>
+      <p class="left">What kind of vehicle are you looking to research? Fill out this form and we can help you find all the stats on your new vehicle.</p>
 
       <div class="ui-content">
         <form method="get" action="">
           <fieldset class="ui-field-contain">
             <label for="name">Name:</label>
-            <input type="text" name="name" id="name" value=" " placeholder="Name"/>
+            <input type="text" name="name" id="name" value=" " placeholder=" " />
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" value=" " placeholder="Email" />
+            <input type="email" name="email" id="email" value=" " placeholder=" " />
           </fieldset>
+
           <div class="ui-field-contain">
               <label for="details">Questions</label>
               <textarea id="details"></textarea>
             </div>
           </div>
+
+                  <div data-role="rangeslider">
+                          <label for="range-1a">Select Price Range:</label>
+                          <input type="range" name="range-1a" id="range-1a" min="0" max="90000" value="20000">
+                          <label for="range-1b">Rangeslider:</label>
+                          <input type="range" name="range-1b" id="range-1b" min="0" max="90000" value="70000">
+                      </div>
+
+
+                      <fieldset data-role="controlgroup" data-iconpos="right">
+                          <legend>Select Vehicle Interest:</legend>
+                          <input type="radio" name="radio-choice-w-6" id="radio-choice-w-6a" value="on" checked="checked">
+                          <label for="radio-choice-w-6a">Luxury</label>
+                          <input type="radio" name="radio-choice-w-6" id="radio-choice-w-6b" value="luxury">
+                          <label for="radio-choice-w-6b">Sport</label>
+                          <input type="radio" name="radio-choice-w-6" id="radio-choice-w-6c" value="sport">
+                          <label for="radio-choice-w-6c">4x4</label>
+                      </fieldset>
+                
+
+                 
+    
+                     
+
+
+          <a href="index.html" data-role="button">Submit</a>
 
         </form>
       </div>
@@ -392,7 +423,8 @@
       </header>
       <div data-role="content">
         <h1 class="center">Search Vehicle:</h1>
-        <input type="search">
+        <input id="clickMe" type="search" value=" " onclick="callApi();" />
+        <p id="div1"></p>
       </div>
     </div>
   <!--
