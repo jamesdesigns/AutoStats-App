@@ -99,9 +99,10 @@
       -webkit-mask-repeat-y: no-repeat;
     }
 
-    header {
+    header.homePG {
       background-color: #000;
     }
+
 
     header h1.title {
       font-family: Arial, Helvetica, sans-serif;
@@ -195,7 +196,7 @@
 
     </nav>
 
-    <header>
+    <header class="homePG">
       <h1 class="title">AutoStats</h1>
     <p class="subtitle">Explore all the Stats.</p>
     </header>
@@ -219,7 +220,7 @@
   <div id="programsEvents" data-role="page">
       <header data-role="header" data-position="fixed" data-id="appHeader">
           <h1>AutoStats</h1>
-          <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon" data-transition="slidedown">Back</a>
+          <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon" data-transition="fade">Back</a>
         </header>
         <div data-role="content">
             <h1 class="center">New 2019 Vehicles</h1>
@@ -267,11 +268,11 @@
   <!-- New Page 2 -->
   <div id="fineart" data-role="page">
       <header data-role="header" data-position="fixed" data-id="appHeader">
-          <h1>AutoStats - Electric</h1>
-          <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon" data-transition="slidedown">Back</a>
+          <h1>AutoStats</h1>
+          <a href="#homeScreen" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-btn-left ui-nodisc-icon ui-alt-icon" data-transition="fade">Back</a>
         </header>
         <div data-role="content">
-          <h1 class="center">Electric Models</h1>
+          <h1 class="center">Electric Vehicles</h1>
 
           <div data-role="collapsibleset" data-theme="a" data-content-theme="a">
                   <div data-role="collapsible" data-iconpos="right">
@@ -368,14 +369,14 @@
 
                   <div data-role="rangeslider">
                           <label for="range-1a">Select Price Range:</label>
-                          <input type="range" name="range-1a" id="range-1a" min="0" max="90000" value="20000">
+                          <input type="range" name="range-1a" id="range-1a" min="0" max="99000" value="20000">
                           <label for="range-1b">Rangeslider:</label>
-                          <input type="range" name="range-1b" id="range-1b" min="0" max="90000" value="70000">
+                          <input type="range" name="range-1b" id="range-1b" min="0" max="99000" value="70000">
                       </div>
 
 
                       <fieldset data-role="controlgroup" data-iconpos="right">
-                          <legend>Select Vehicle Interest:</legend>
+                          <legend>Desired Vehicle Type:</legend>
                           <input type="radio" name="radio-choice-w-6" id="radio-choice-w-6a" value="on" checked="checked">
                           <label for="radio-choice-w-6a">Luxury</label>
                           <input type="radio" name="radio-choice-w-6" id="radio-choice-w-6b" value="luxury">
